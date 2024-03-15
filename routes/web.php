@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('dashboard', function () {
+    return view('dashboard');
+});
+
 
 Route::post('/register', [UserController::class,'register']);
 
