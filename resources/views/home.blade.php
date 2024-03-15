@@ -30,6 +30,7 @@
         .container form input{
             padding: 10px;
             border: 1.5px solid black;
+            border-radius: 6px;
         }
         .container form button{
             padding: 10px;
@@ -42,7 +43,7 @@
             margin-bottom: 5px;
         }
         .container form button:hover{
-            background: rgba(0, 0, 0, 0.658);
+            cursor: pointer;            background: rgba(0, 0, 0, 0.658);
         }
         ::placeholder{
             color: black;
