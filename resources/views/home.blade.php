@@ -15,7 +15,7 @@
             display: flex;
             flex-direction:column;
             gap: 30px;
-            width: 100%; 
+            width: 100%;
         }
         .container{
             padding: 5px;
@@ -61,13 +61,13 @@
     </style>
 <div class="main-container">
     <h1>Laravel Crud App</h1>
-    
+
     <div class="container">
         <h1>Register</h1>
         <form action="/register" method="post">
             @csrf
             <input type="email" placeholder="Email..." name="email">
-            <input type="text" placeholder="Username..." name="username">
+            <input type="text" placeholder="Username..." name="name">
             <input type="password" placeholder="Password..." name="password">
             <button type="submit" name="submit">Register...</button>
         </form>
