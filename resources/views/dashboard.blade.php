@@ -43,7 +43,8 @@
             margin-bottom: 5px;
         }
         .container form button:hover{
-            cursor: pointer;            background: rgba(0, 0, 0, 0.658);
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.658);
         }
         ::placeholder{
             color: black;
