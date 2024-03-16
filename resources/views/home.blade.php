@@ -73,6 +73,16 @@
         </form>
     </div>
 
+    <div class="container">
+        <h1>Login</h1>
+        <form action="/login" method="post">
+            @csrf
+            <input type="text" placeholder="Username..." name="loginname">
+            <input type="password" placeholder="Password..." name="loginpassword">
+            <button type="submit" name="submit">Login...</button>
+        </form>
+    </div>
+
 </div>
 </body>
 </html>
