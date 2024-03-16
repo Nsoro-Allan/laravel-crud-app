@@ -70,7 +70,17 @@
         <form action="/logout" method="post">
             @csrf
             <button type="submit">Logout</button>
-        </form>
+        </form><br>
+
+        <div class="container">
+            <h1>Add Blog Post</h1>
+            <form action="/create_post" method="post">
+                @csrf
+                <input type="text" placeholder="Blog Title..." name="title">
+                <input type="text" placeholder="Blog Body..." name="body">
+                <button type="submit" name="submit">Add Blog...</button>
+            </form>
+        </div>
 
         @else
             <h2>You are not logged in...</h2>
