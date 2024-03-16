@@ -10,7 +10,7 @@ class UserController extends Controller
 {
     public function register(Request $request){
         $incomingFields = $request->validate([
-            'email' => ['required', 'email', Rule::unique('users', 'email')],
+            'email' => ['required', Rule::unique('users', 'email')],
             'name' => ['required', Rule::unique('users', 'name')],
             'password' => 'required'
         ]);

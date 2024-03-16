@@ -66,10 +66,12 @@
         <h1>Dashboard</h1>
 
         @auth
-        <h1>Welcome User...</h1>
+        <h2>Welcome User You are logged in...</h2>
+
         @else
-            <h1>You are not logged in...</h1>
-            <h2>Please Loggin here?</h2><a href="./home">login</a>
+            <h2>You are not logged in...</h2>
+            <h3>Please Loggin here?</h3><a href="./home">login</a>
+
         @endauth
 
     </div>
