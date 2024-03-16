@@ -67,6 +67,10 @@
 
         @auth
         <h2>Welcome User You are logged in...</h2>
+        <form action="/logout" method="post">
+            @csrf
+            <button type="submit">Logout</button>
+        </form>
 
         @else
             <h2>You are not logged in...</h2>

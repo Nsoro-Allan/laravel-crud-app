@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +23,7 @@ Route::get('dashboard', function () {
     return view('dashboard');
 });
 
-
 Route::post('/register', [UserController::class,'register']);
 
+Route::post('/logout',[UserController::class, 'logout']);
 
