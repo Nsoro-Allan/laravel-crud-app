@@ -66,9 +66,9 @@
         <h1>Register</h1>
         <form action="/register" method="post">
             @csrf
-            <input type="email" placeholder="Email..." name="email">
-            <input type="text" placeholder="Username..." name="name">
-            <input type="password" placeholder="Password..." name="password">
+            <input type="email" placeholder="Email..." name="email" required>
+            <input type="text" placeholder="Username..." name="name" required>
+            <input type="password" placeholder="Password..." name="password" required>
             <button type="submit" name="submit">Register...</button>
         </form>
     </div>
@@ -77,8 +77,8 @@
         <h1>Login</h1>
         <form action="/login" method="post">
             @csrf
-            <input type="text" placeholder="Username..." name="loginname">
-            <input type="password" placeholder="Password..." name="loginpassword">
+            <input type="text" placeholder="Username..." name="loginname" required>
+            <input type="password" placeholder="Password..." name="loginpassword" required>
             <button type="submit" name="submit">Login...</button>
         </form>
     </div>
