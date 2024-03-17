@@ -23,12 +23,12 @@
         </form><br>
 
         <div class="container">
-            <h1>Add Blog Post</h1>
+            <h1>Add New Post</h1>
             <form action="/create_post" method="post">
                 @csrf
-                <input type="text" placeholder="Blog Title..." name="title">
-                <input type="text" placeholder="Blog Body..." name="body">
-                <button type="submit" name="submit">Add Blog...</button>
+                <input type="text" placeholder="Post Title..." name="title">
+                <input type="text" placeholder="Post Body..." name="body">
+                <button type="submit" name="submit">Create Post...</button>
             </form>
         </div>
 

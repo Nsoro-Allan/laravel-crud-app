@@ -5,7 +5,7 @@ body {
 .main-container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
     width: 50%;
     position: absolute;
     left: 50%;
@@ -19,7 +19,7 @@ body {
 .container form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 .container form input {
     padding: 10px;
@@ -44,12 +44,12 @@ body {
     color: black;
 }
 h1 {
-    padding: 10px 15px;
+    padding: 8px;
     border-style: dashed;
-    font-style: italic;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     background: black;
     color: #fff;
     border-radius: 6px;
     border: 2px solid #fff;
+    text-align: center;
 }

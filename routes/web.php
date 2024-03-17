@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Models\User;
@@ -28,4 +29,8 @@ Route::post('/login', [UserController::class,'login']);
 Route::post('/register', [UserController::class,'register']);
 
 Route::post('/logout',[UserController::class, 'logout']);
+
+
+// Post Routes
+Route::post('/create_post', [PostController::class, 'createPost']);
 
