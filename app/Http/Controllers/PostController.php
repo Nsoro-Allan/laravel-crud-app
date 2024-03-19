@@ -21,6 +21,6 @@ class PostController extends Controller
 
         Post::create($incomingFields);
 
-        return redirect('/dashboard');
+        return redirect('dashboard');
     }
 }
