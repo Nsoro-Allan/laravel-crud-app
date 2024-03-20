@@ -18,7 +18,14 @@ use App\Models\User;
 */
 
 Route::get('/dashboard', function () {
-    $posts = Post::all();
+    // For Viewing loggedin user's posts only
+    $posts = [];
+    if(auth()->check()){
+        $posts = auth()->user()->usersAllPosts()->latest()->get();
+    }
+
+    // For Viewing all posts
+    // $posts = Post::all();
     return view('dashboard', ['posts' => $posts]);
 });
 
@@ -39,4 +46,8 @@ Route::post('/logout',[UserController::class, 'logout']);
 
 // Post Routes
 Route::post('/create_post', [PostController::class, 'createPost']);
+
+Route::get('/edit-post/{post}', [PostController::class, 'showEdit']);
+
+Route::PUT('/edit-post/{post}', [PostController::class, 'updatePost']);
 

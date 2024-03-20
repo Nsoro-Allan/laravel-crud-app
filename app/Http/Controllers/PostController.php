@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+
+    public function showEdit(Post $post){
+        return view('edit-post', ['post' => $post]);
+    }
+
     public function createPost(Request $request){
         $incomingFields = $request->validate([
             'title' =>'required',

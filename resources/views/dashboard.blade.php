@@ -38,6 +38,12 @@
                 <div class="container">
                     <h2>{{$post['title']}}</h2>
                     <p>{{$post['body']}}</p>
+                    <a href="/edit-post/{{$post-> id}}">Edit Post</a>
+                    <form action="/delete-post/{{$post->id}}" method="post"><br>
+                        @csrf
+                        @method('Delete')
+                         <button type="submit">Delete</button>
+                    </form>
                 </div><br>
             @endforeach
         </div>
