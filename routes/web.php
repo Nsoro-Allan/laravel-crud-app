@@ -17,7 +17,7 @@ use App\Models\User;
 |
 */
 
-Route::get('/dashboard', function () {
+Route::get('/', function () {
     // For Viewing loggedin user's posts only
     $posts = [];
     if(auth()->check()){
