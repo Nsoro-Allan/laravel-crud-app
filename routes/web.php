@@ -3,6 +3,7 @@
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Models\Post;
 use App\Models\User;
 
 /*
@@ -16,13 +17,18 @@ use App\Models\User;
 |
 */
 
-Route::get('/', function () {
+Route::get('/dashboard', function () {
+    $posts = Post::all();
+    return view('dashboard', ['posts' => $posts]);
+});
+
+Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('dashboard', function () {
-    return view('dashboard');
-});
+// Route::get('dashboard', function () {
+//     return view('dashboard');
+// });
 
 Route::post('/login', [UserController::class,'login']);
 

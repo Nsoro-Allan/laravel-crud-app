@@ -30,11 +30,21 @@
                 <input type="text" placeholder="Post Body..." name="body">
                 <button type="submit" name="submit">Create Post...</button>
             </form>
+        </div><br>
+
+        <div class="container">
+            <h1>All Posts</h1>
+            @foreach ($posts as $post)
+                <div class="container">
+                    <h2>{{$post['title']}}</h2>
+                    <p>{{$post['body']}}</p>
+                </div><br>
+            @endforeach
         </div>
 
         @else
             <h2>You are not logged in...</h2>
-            <h3>Please Loggin here?</h3><a href="./home">login</a>
+            <h3>Please Loggin here?</h3><a href="/home">login</a>
 
         @endauth
 
